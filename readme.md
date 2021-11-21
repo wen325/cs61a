@@ -1,3 +1,4 @@
-My codes and notes for cs61a.
+My codes and notes for cs61a 18spring
 
-Now it changes to .md
+Most assignments inlcude hw, lab, project, csm, disc, exam_prep are finished.
+Some scheme contents like macro are unfinished.

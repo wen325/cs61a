@@ -2,14 +2,15 @@
     (car (cdr (cdr (car (car (cdr x))))))
 )
 
-;;; hard, unfinished
+;;;
 (define (deeval num k)
     (cond
-        (eq? k 1) 1)
-        (eq? k 0) 0)
+        ((eq? num 0)  1)
+        ((eq? k 0) 0)
         (else
             (+
-                (if (eq? (modulo num k) 0
+                (if (eq? (modulo num k) 0) 
+                    (deeval (/ num k) (- k 1))
                     0
             )
             (deeval (- num k) (- k 1))
@@ -17,9 +18,6 @@
         )
     )
 )
-
-
-
 
 
 (define (deep-reverse lst)
